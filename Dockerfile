@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 RUN apt-get update && apt-get install -y default-jdk curl
 RUN groupadd tomcat
+RUN groupadd jenkins
 RUN useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
 RUN cd /tmp
 RUN curl -O https://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz
